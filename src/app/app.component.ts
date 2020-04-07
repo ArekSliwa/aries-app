@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aries-app';
+
+  links = [{
+    label: 'Matma',
+    url: 'matma'
+  }];
 }
