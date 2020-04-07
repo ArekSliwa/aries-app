@@ -1,0 +1,30 @@
+
+<mat-toolbar>
+  <h3>Hej!. Zobacz jaki Kuki jest smutny, bo nie umie dodawać i odejmować. Pomożesz mu?</h3>
+</mat-toolbar>
+<section>
+
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+  <mat-button-toggle (click)="onNew()">Nowy</mat-button-toggle>
+  <mat-button-toggle (click)="onChangeOperation('+')"> + Dodawanie</mat-button-toggle>
+  <mat-button-toggle (click)="onChangeOperation('-')"> - Odejmowanie</mat-button-toggle>
+</mat-button-toggle-group>
+
+
+<form *ngIf="numberOne" [formGroup]="form">
+  <h3 >{{numberOne}} {{operation}} {{numberTwo}} = </h3>
+  <mat-form-field>
+    <input (keyup.enter)="onCheckValue()" formControlName="score" type="number" matInput autocomplete="off">
+  </mat-form-field>
+  <button class="check-value-btn" mat-fab color="accent" (click)="onCheckValue()">Wynik</button>
+</form>
+
+
+<div class="correct-score-msg" *ngIf="displayUserGuessedMsg">
+  Brawo, jesteś kozak!
+</div>
+
+<div class="bad-score-msg" *ngIf="displayUserNotGuessedMsg">
+  Poprawny wynik to: {{ currentScoreShouldBe }}
+</div>
+</section>

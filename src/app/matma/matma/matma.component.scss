@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  background-image: url("../../../assets/img/kuki.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+section {
+  padding: 20px 20px 20px 40px;
+  height: 100%;
+  background: rgba(256, 256, 256, 0.6);
+}
+
+form {
+  display: flex;
+  margin-top: 24px;
+}
+
+h3 {
+  margin-right: 12px;
+}
+
+.check-value-btn {
+  margin-left: 24px;
+}
+
+
+.correct-score-msg,
+.bad-score-msg {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.correct-score-msg {
+  color: #279827;
+}
+
+.bad-score-msg {
+  color: #983e48;
+}
